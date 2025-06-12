@@ -11,10 +11,6 @@ public class OpenWebStepDefinition {
     @Before
     public void setTheStage() {OnStage.setTheStage(new OnlineCast());}
 
-    @Given("{string} abre el sitio web de pruebas")
-    public void abreElSitioWebDePruebas(String string) {
-
-    }
     @When("ingresa al navegador chrome")
     public void ingresaAlNavegadorChrome() {
 
