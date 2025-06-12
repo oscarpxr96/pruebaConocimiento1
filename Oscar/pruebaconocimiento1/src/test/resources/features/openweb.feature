@@ -1,7 +1,10 @@
 Feature: abrir una pagina web
 
+Background:
+  Given "Oscar" abre el sitio web de pruebas
+
   @succesful
   Scenario: abrir con el navegador chrome la pagina web chrome
-    Given "Oscar" abre el sitio web de pruebas
-    When ingresa al navegador chrome
-    Then visualiraza el titulo de la pagina "Cucumber"
+    And desea validar la funcion de la carta de elementos
+    When selecciona aleatoriamente alguna de las subfunciones
+    Then visualiraza en la cabecera el nombre de la opcion elegida

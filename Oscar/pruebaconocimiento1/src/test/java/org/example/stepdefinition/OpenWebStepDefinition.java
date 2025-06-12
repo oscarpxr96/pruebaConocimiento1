@@ -1,6 +1,7 @@
 package org.example.stepdefinition;
 
 import io.cucumber.java.Before;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,12 +12,17 @@ public class OpenWebStepDefinition {
     @Before
     public void setTheStage() {OnStage.setTheStage(new OnlineCast());}
 
-    @When("ingresa al navegador chrome")
-    public void ingresaAlNavegadorChrome() {
+    @And("desea validar la funcion de la carta de elementos")
+    public void deseaValidarLaFuncionDeLaCartaDeElementos() {
 
     }
-    @Then("visualiraza el titulo de la pagina {string}")
-    public void visualirazaElTituloDeLaPagina(String string) {
+
+    @When("selecciona aleatoriamente alguna de las subfunciones")
+    public void seleccionaAleatoriamenteAlgunaDeLasSubfunciones() {
+
+    }
+    @Then("visualiraza en la cabecera el nombre de la opcion elegida")
+    public void visualirazaEnLaCabeceraElNombreDeLaOpcionElegida(String string) {
 
     }
 
