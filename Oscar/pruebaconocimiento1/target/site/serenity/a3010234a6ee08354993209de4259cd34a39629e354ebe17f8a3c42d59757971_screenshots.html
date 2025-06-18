@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="c2e21835578eb686c03bdb5ef51af9ca1056ee130bb09d48acfd1aee07e89c77.html">Abrir Una Pagina Web</a></span>
+                > <span class="truncate-60"><a
+                    href="a3010234a6ee08354993209de4259cd34a39629e354ebe17f8a3c42d59757971.html">abrir con el navegador chrome la pagina web chrome </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 17-06-2025 20:47</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Abrir Una Pagina Web </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="cba72c1f908b9c13c41201ac30f2942eaefc0b3f50d3cdc891eabc152b49746a.html">Succesful
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">abrir con el navegador chrome la pagina web chrome
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="f427d01f5b8f0b77681e9f7bdd791230fc1afc8f8d5359f0915c26667007ec30.png" title=" Given &quot;Oscar&quot; abre el sitio web de pruebas" width="1358"/>
+                <img src="f427d01f5b8f0b77681e9f7bdd791230fc1afc8f8d5359f0915c26667007ec30.png" title=" Oscar open web" width="1358"/>
+                <img src="f427d01f5b8f0b77681e9f7bdd791230fc1afc8f8d5359f0915c26667007ec30.png" title=" Oscar opens the browser at https://demoqa.com/" width="1358"/>
+                <img src="f427d01f5b8f0b77681e9f7bdd791230fc1afc8f8d5359f0915c26667007ec30.png" title=" Oscar open web (completed)" width="1358"/>
+                <img src="e0691c4ee8c8196aa0a927b2ae9267cff971b3ca704499e6f41b696f75c39d2b.png" title=" Then the title of the page should be a string containing 'DEMOQA'" width="1026"/>
+                <img src="e0691c4ee8c8196aa0a927b2ae9267cff971b3ca704499e6f41b696f75c39d2b.png" title=" Given &quot;Oscar&quot; abre el sitio web de pruebas (completed)" width="1026"/>
+                <img src="f02de229746d4b1cff89b78cb58bc0e469b99b286f38bce80dfc61d740340595.png" title=" And desea validar la funcion de la carta de elementos" width="1272"/>
+                <img src="f02de229746d4b1cff89b78cb58bc0e469b99b286f38bce80dfc61d740340595.png" title=" Oscar funtions elements task" width="1272"/>
+                <img src="6b40a94cf77aeca5c041aaf6097b3cbb703b7e7ce56ff100992a79db87b90197.png" title=" Oscar clicks on Boton elementos" width="1272"/>
+                <img src="251ffde25d566418c3fd55a136dc4e1239127b2f937237d894413e9f186dd1d3.png" title=" Oscar clicks on Boton elementos" width="1272"/>
+                <img src="bff9081da034864d42c0968d142683ff920af35f9d4ad03298e99fc7929a73a2.png" title=" Oscar clicks on Boton elementos (completed)" width="1272"/>
+                <img src="e59b712a01427f65231e0368e112451e7a0a7299ef8359154c940cce2e7b5abd.png" title=" Oscar funtions elements task (completed)" width="1272"/>
+                <img src="52b67614471879bfc8b673b0de9cfa94efb1061821d020b19fedb693c5d25743.png" title=" And desea validar la funcion de la carta de elementos (completed)" width="1272"/>
+                <img src="3c6de679a2ce11bdf19a64b8aa9a5fc6ab21b8900714aa0b5300616931a272c3.png" title=" When selecciona aleatoriamente alguna de las subfunciones" width="1272"/>
+                <img src="3c6de679a2ce11bdf19a64b8aa9a5fc6ab21b8900714aa0b5300616931a272c3.png" title=" Oscar choose random task" width="1272"/>
+                <img src="988b353008cff7281e23522dfa09eac855b512904293eb246c690407b9e7657a.png" title=" Oscar clicks on boton lista opciones elementos" width="1272"/>
+                <img src="1893152b8fea9a9d9b173856f42375382626f42080db4a3e2f6cd151b78a90fd.png" title=" Oscar clicks on boton lista opciones elementos (completed)" width="1272"/>
+                <img src="1893152b8fea9a9d9b173856f42375382626f42080db4a3e2f6cd151b78a90fd.png" title=" Oscar choose random task (completed)" width="1272"/>
+                <img src="1893152b8fea9a9d9b173856f42375382626f42080db4a3e2f6cd151b78a90fd.png" title=" When selecciona aleatoriamente alguna de las subfunciones (completed)" width="1272"/>
+                <img src="1893152b8fea9a9d9b173856f42375382626f42080db4a3e2f6cd151b78a90fd.png" title=" Then visualiraza en la cabecera el nombre de la opcion elegida" width="1272"/>
+                <img src="1893152b8fea9a9d9b173856f42375382626f42080db4a3e2f6cd151b78a90fd.png" title=" Then validate elements test btn: <span class='success-color'>SUCCESS</span>" width="1272"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.3.4</span>
+</div>
+</body>
+</html>
