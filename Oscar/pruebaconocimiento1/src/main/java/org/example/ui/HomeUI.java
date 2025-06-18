@@ -16,5 +16,5 @@ public class HomeUI extends PageObject {
             .locatedBy("//div/div/div[1]/div/ul/li[{0}]");
 
     public static final Target TXT_RANDOM_NAME_BTN= Target.the("texto random, del nombre de los botones")
-            .located(By.xpath("//div[@class='main-header']"));
+            .located(By.xpath("//div/h1[@class='text-center']"));
 }

@@ -7,4 +7,6 @@ public class Constans {
 
     public static final int TIME_SHORT = 5;
     public static final String TITLE = "DEMOQA";
+
+    public static final String REMEMBER_TEXT_BTN_SUB_ELEMENTS = "rememberTextBtnSubElements";
 }
